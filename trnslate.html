@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>AI Translator Pro - Accurate Text & Document Translation</title>
+    <meta name="description" content="Translate text, PDF, and JPG documents accurately into multiple languages with AI Translator Pro. Fast, reliable, and easy to use.">
+    <meta name="keywords" content="translate, translator, document translation, pdf translation, jpg translation, ocr, multi-language, ai translation, online translator, free translator">
+    <meta name="author" content="AI Translator Pro Team">
+    <!-- IMPORTANT: Replace https://www.yourwebsite.com/ with your actual domain -->
+    <link rel="canonical" href="https://www.yourwebsite.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.yourwebsite.com/"> <!-- Replace -->
+    <meta property="og:title" content="AI Translator Pro - Accurate Text & Document Translation">
+    <meta property="og:description" content="Translate text, PDF, and JPG documents accurately into multiple languages.">
+    <!-- IMPORTANT: Create a 1200x630px image and replace the path -->
+    <meta property="og:image" content="https://www.yourwebsite.com/images/social-preview.jpg">
+    <meta property="og:site_name" content="AI Translator Pro">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.yourwebsite.com/"> <!-- Replace -->
+    <meta property="twitter:title" content="AI Translator Pro - Accurate Text & Document Translation">
+    <meta property="twitter:description" content="Translate text, PDF, and JPG documents accurately into multiple languages.">
+    <meta property="twitter:image" content="https://www.yourwebsite.com/images/social-preview.jpg"> <!-- Use the same image -->
+
+    <!-- Favicon (Place a favicon.ico in your root directory or update path) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Optional: Apple Touch Icon -->
+    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png"> -->
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google AdSense Script - IMPORTANT: Replace 'YOUR_ADSENSE_CLIENT_ID' -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=YOUR_ADSENSE_CLIENT_ID"
+     crossorigin="anonymous"></script>
+
+    <style>
+        /* CSS STYLES (Keep the original CSS styles as they were largely okay) */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+
+        :root {
+            --primary-color: #5e17eb; /* Deep Purple */
+            --secondary-color: #007bff; /* Bright Blue */
+            --accent-color: #ff4081; /* Vibrant Pink */
+            --text-color: #333;
+            --text-light: #f8f9fa;
+            --bg-color: #f0f2f5; /* Light Gray */
+            --container-bg: #ffffff;
+            --border-radius: 12px;
+            --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header & Nav */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-light);
+            padding: 1rem 5%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: background var(--transition-speed) ease;
+        }
+        header.scrolled {
+            background: var(--primary-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        nav .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+        nav .logo .pro {
+            font-weight: 300;
+            opacity: 0.8;
+        }
+        nav .logo i {
+            margin-right: 10px;
+            color: var(--accent-color);
+            transform: rotate(-15deg);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+            padding-bottom: 5px;
+            position: relative;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width var(--transition-speed) ease;
+        }
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Nav Toggle (Burger Menu) */
+        .nav-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1100; /* Above nav background and mobile menu */
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            padding: 2rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Translator Container */
+        .translator-container {
+            background: var(--container-bg);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 2.5rem;
+        }
+
+        .translation-mode-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            background-color: var(--bg-color);
+            border-radius: var(--border-radius);
+            padding: 5px;
+        }
+
+        .mode-btn {
+            flex: 1;
+            background-color: transparent;
+            color: var(--text-color);
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: calc(var(--border-radius) - 5px);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all var(--transition-speed) ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .mode-btn:hover {
+            background-color: #e9ecef;
+        }
+
+        .mode-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .mode-btn.active i { color: white; }
+
+        /* Language Selectors */
+        .language-selectors {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1.5rem;
+            position: relative;
+        }
+
+        .lang-select-group {
+            flex: 1;
+            position: relative;
+        }
+        .lang-select-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        select {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            background-color: white;
+            appearance: none;
+            -webkit-appearance: none; /* Safari */
+            -moz-appearance: none; /* Firefox */
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1.2em;
+            transition: border-color var(--transition-speed);
+            cursor: pointer;
+        }
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(94, 23, 235, 0.15);
+        }
+
+        #swap-languages {
+            background: var(--container-bg);
+            border: 1px solid #ddd;
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            cursor: pointer;
+            padding: 0.6rem;
+            border-radius: 50%;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            margin-top: 1.7rem; /* Align with select boxes */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        #swap-languages:hover {
+            transform: rotate(180deg) scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        /* IO Area */
+        .io-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 220px;
+            padding: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-family: 'Roboto Mono', monospace; /* Good for code/text */
+            resize: vertical;
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(94, 23, 235, 0.15);
+        }
+        #output-text, #output-document {
+            background-color: var(--bg-color);
+        }
+
+        /* Document Upload Area */
+        #document-translation-area .io-area { /* Override for single column layout in document mode */
+            grid-template-columns: 1fr;
+        }
+
+        .file-drop-zone {
+            border: 3px dashed var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+            margin-bottom: 1rem;
+            background-color: #fdf6f8; /* Light pinkish */
+        }
+        .file-drop-zone.dragover {
+            background-color: #ffe0e9;
+            border-color: #e02f68;
+        }
+        .file-drop-zone i {
+            font-size: 3.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            transition: transform var(--transition-speed) ease;
+        }
+        .file-drop-zone:hover i {
+            transform: scale(1.1);
+        }
+        .file-drop-zone p {
+            margin-bottom: 1rem;
+            color: #555;
+            font-weight: 500;
+        }
+        #browse-file-btn {
+            background: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+        }
+        #browse-file-btn:hover {
+            background-color: #e02f68;
+            transform: translateY(-2px);
+        }
+        #file-name-display {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        .output-document-preview {
+            min-height: 150px;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            background-color: var(--bg-color);
+            color: #666;
+            font-family: 'Roboto Mono', monospace;
+            white-space: pre-wrap; /* Preserve formatting for mock output */
+        }
+
+        /* Translate Button & Loading */
+        #translate-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            max-width: 350px;
+            margin: 1rem auto 0;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        #translate-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(94, 23, 235, 0.3);
+        }
+        #translate-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        #translate-btn .fa-magic {
+            transition: transform 0.5s ease-in-out;
+        }
+        #translate-btn:hover:not(:disabled) .fa-magic {
+            transform: rotate(360deg);
+        }
+
+        #loading-indicator {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        #loading-indicator .fa-spinner {
+            font-size: 1.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 3rem 0;
+            text-align: center;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-item {
+            background: var(--container-bg);
+            padding: 2rem 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+            border-top: 4px solid transparent; /* For hover effect */
+        }
+        .feature-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            border-top-color: var(--accent-color);
+        }
+        .feature-item i {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            transition: transform var(--transition-speed) ease;
+            display: inline-block;
+            padding: 15px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        .feature-item:hover i {
+            transform: scale(1.1) rotate(-10deg);
+        }
+        .feature-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary-color);
+        }
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Ad Slots */
+        .ad-slot-container {
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: #e9ecef; /* Light, neutral background for ad section */
+            border-radius: var(--border-radius);
+            text-align: center;
+        }
+        .ad-slot-container h2, .ad-slot-container h3 {
+            margin-bottom: 1.5rem;
+            color: #444;
+            font-weight: 600;
+        }
+        .ad-slot {
+            min-height: 90px; /* Default for banner */
+            background: #ddd; /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--border-radius);
+            overflow: hidden; /* Important for AdSense */
+            border: 1px solid #ccc;
+            position: relative; /* Needed for absolute positioning of placeholder */
+        }
+        .ad-slot-banner { min-height: 90px; max-width: 728px; margin: 0 auto;}
+        .ad-slot-sidebar { min-height: 250px; max-width: 300px; margin: 0 auto;}
+
+        .ad-placeholder-text {
+            color: #777;
+            font-style: italic;
+            padding: 1rem; /* Add some padding */
+            display: none; /* Initially hidden, shown by JS if needed */
+            position: absolute; /* Position over the ad slot area */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(221, 221, 221, 0.8); /* Semi-transparent background */
+            width: 90%; /* Take up most of the slot width */
+            border-radius: 5px;
+        }
+        .adsbygoogle {
+            display: block; /* Default AdSense style */
+            /* Ensure ad fills the container */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50; /* Darker footer */
+            color: #bdc3c7; /* Light gray text */
+            text-align: center;
+            padding: 2rem 5%;
+            margin-top: auto; /* Pushes footer to bottom */
+        }
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color var(--transition-speed);
+        }
+        footer a:hover {
+            color: #ff79a6; /* Lighter pink */
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            nav .logo { font-size: 1.8rem; }
+            .section-title { font-size: 2.2rem; }
+            .subtitle { font-size: 1.05rem; }
+
+            /* Mobile Navigation Styles */
+            nav ul#nav-links { /* Target by ID for specificity */
+                position: fixed;
+                top: 0;
+                right: -300px; /* Start off-screen */
+                width: 280px;
+                height: 100vh;
+                background: linear-gradient(160deg, var(--primary-color), var(--secondary-color)); /* Match header */
+                flex-direction: column;
+                align-items: center; /* Center links in mobile menu */
+                justify-content: flex-start; /* Align items to top */
+                padding-top: 6rem; /* Space for logo/close or just breathing room */
+                transition: right 0.4s ease-in-out;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+                z-index: 1050; /* Below toggle button but above content */
+            }
+            nav ul#nav-links.nav-active {
+                right: 0; /* Slide in */
+            }
+            nav ul#nav-links li {
+                margin: 1.5rem 0; /* Vertical spacing for links */
+                margin-left: 0; /* Reset desktop margin */
+            }
+            nav ul#nav-links li a {
+                font-size: 1.2rem; /* Larger font for mobile */
+            }
+            .nav-toggle {
+                display: block; /* Show burger icon */
+            }
+        }
+
+        @media (max-width: 768px) {
+            main { padding: 2rem 3%; }
+            .translator-container { padding: 1.5rem; }
+            .language-selectors {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+            }
+            #swap-languages {
+                align-self: center;
+                margin-top: 0.5rem;
+                transform: rotate(90deg); /* Vertical swap icon */
+            }
+            #swap-languages:hover { transform: rotate(270deg) scale(1.1); } /* Adjust hover rotation */
+
+            .io-area {
+                grid-template-columns: 1fr;
+            }
+            textarea { height: 180px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            #translate-btn { max-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .section-title { font-size: 1.8rem; }
+            .subtitle { font-size: 1rem; }
+            .mode-btn { font-size: 0.9rem; padding: 0.7rem 1rem; }
+            select, textarea { font-size: 0.95rem; padding: 0.8rem 1rem; }
+            .file-drop-zone { padding: 1.5rem; }
+            .file-drop-zone i { font-size: 2.5rem; }
+            #browse-file-btn { font-size: 0.9rem; padding: 0.7rem 1.5rem; }
+            footer { padding: 1.5rem 3%; }
+        }
+    </style>
+</head>
+<body>
+    <header id="page-header">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-globe-americas"></i> AI Translator <span class="pro">Pro</span>
+            </div>
+            <ul id="nav-links"> <!-- ID for JS targeting -->
+                <li><a href="#translator-section">Translate</a></li>
+                <li><a href="#features-section">Features</a></li>
+                <li><a href="#ads-banner-1">Ads</a></li>
+                <li><a href="#" id="contact-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i> <!-- Icon toggled by JS -->
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="translator-section" class="translator-container">
+            <h1 class="section-title">Instant & Accurate Translations</h1>
+            <p class="subtitle">Break language barriers with our AI-powered text, PDF, and image translation.
+                (Document translation is simulated. Text translation uses a free public API - backend recommended for production).
+            </p>
+
+            <div class="translation-mode-selector">
+                <button class="mode-btn active" data-mode="text">
+                    <i class="fas fa-font"></i> Text
+                </button>
+                <button class="mode-btn" data-mode="document">
+                    <i class="fas fa-file-alt"></i> Document (PDF, JPG/PNG)
+                </button>
+            </div>
+
+            <div class="language-selectors">
+                <div class="lang-select-group">
+                    <label for="source-lang">From:</label>
+                    <select id="source-lang" aria-label="Source Language">
+                        <option value="auto">Auto-detect (API dependent)</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh-CN">Chinese (Simplified)</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                        <!-- Add more languages supported by MyMemory API if needed -->
+                    </select>
+                </div>
+                <button id="swap-languages" aria-label="Swap Languages" title="Swap Languages"><i class="fas fa-exchange-alt"></i></button>
+                <div class="lang-select-group">
+                    <label for="target-lang">To:</label>
+                    <select id="target-lang" aria-label="Target Language">
+                        <option value="es">Spanish</option>
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="ja">Japanese</option>
+                        <option value="ko">Korean</option>
+                        <option value="zh-CN">Chinese (Simplified)</option>
+                        <option value="ar">Arabic</option>
+                        <option value="hi">Hindi</option>
+                        <!-- Add more languages supported by MyMemory API if needed -->
+                    </select>
+                </div>
+            </div>
+
+            <div id="text-translation-area" class="io-area">
+                <textarea id="input-text" placeholder="Enter text to translate..." aria-label="Input text for translation"></textarea>
+                <textarea id="output-text" placeholder="Translation will appear here..." readonly aria-label="Translated text output"></textarea>
+            </div>
+
+            <div id="document-translation-area" class="io-area" style="display: none;">
+                <div class="file-drop-zone" id="file-drop-zone-id">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag & Drop PDF or JPG/PNG file here, or</p>
+                    <input type="file" id="document-file" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                    <button type="button" id="browse-file-btn">Browse File</button>
+                    <p id="file-name-display"></p>
+                </div>
+                <div id="output-document" class="output-document-preview" aria-label="Document translation output">
+                    Document translation functionality is simulated. Real processing requires backend development. Select a file and click Translate to see simulation.
+                </div>
+            </div>
+
+            <button type="button" id="translate-btn"><i class="fas fa-magic"></i> Translate</button>
+            <div id="loading-indicator" style="display: none;" role="status" aria-live="polite">
+                <i class="fas fa-spinner fa-spin"></i> Translating...
+            </div>
+        </section>
+
+        <!-- Ad Unit 1: Horizontal Banner -->
+        <section class="ad-slot-container" id="ads-banner-1">
+            <h3>Advertisement</h3>
+            <div class="ad-slot ad-slot-banner">
+                <!-- IMPORTANT: Replace YOUR_ADSENSE_CLIENT_ID and YOUR_AD_SLOT_ID_BANNER -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="YOUR_ADSENSE_CLIENT_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID_BANNER"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                <p class="ad-placeholder-text" style="display: none;">Ad Space (e.g., 728x90 or responsive)</p>
+            </div>
+        </section>
+
+        <section id="features-section" class="features">
+            <h2 class="section-title">Why Choose AI Translator Pro?</h2>
+            <div class="feature-grid">
+                <article class="feature-item">
+                    <i class="fas fa-brain"></i>
+                    <h3>AI-Powered Text</h3>
+                    <p>Utilizes public APIs for text translation. (Premium features require backend setup).</p>
+                </article>
+                <article class="feature-item">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Document Support UI</h3>
+                    <p>Interface ready for PDF & Image translation. (Full functionality needs backend integration).</p>
+                </article>
+                <article class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <h3>Multiple Languages</h3>
+                    <p>Translate text between a wide array of languages using available APIs.</p>
+                </article>
+                <article class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h3>User-Friendly</h3>
+                    <p>Experience rapid text translations with an intuitive and responsive design.</p>
+                </article>
+            </div>
+        </section>
+
+         <!-- Ad Unit 2: Sidebar or In-Article Style -->
+        <section class="ad-slot-container">
+            <h3>Support Our Work</h3>
+            <div class="ad-slot ad-slot-sidebar">
+                 <!-- IMPORTANT: Replace YOUR_ADSENSE_CLIENT_ID and YOUR_AD_SLOT_ID_SIDEBAR -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="YOUR_ADSENSE_CLIENT_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID_SIDEBAR"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+                 <p class="ad-placeholder-text" style="display: none;">Ad Space (e.g., 300x250 or responsive)</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="current-year"></span> AI Translator Pro. All Rights Reserved.</p>
+        <p><a href="#privacy-policy" id="privacy-link">Privacy Policy</a> | <a href="#terms-of-service" id="terms-link">Terms of Service</a></p>
+         <!-- IMPORTANT: Update hrefs for Privacy Policy and Terms of Service to actual pages when available -->
+    </footer>
+
+<script defer> // Added defer attribute
+    // JAVASCRIPT LOGIC (mostly unchanged, minor improvements)
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Get Element References ---
+        const modeButtons = document.querySelectorAll('.mode-btn');
+        const textTranslationArea = document.getElementById('text-translation-area');
+        const documentTranslationArea = document.getElementById('document-translation-area');
+        const sourceLangSelect = document.getElementById('source-lang');
+        const targetLangSelect = document.getElementById('target-lang');
+        const swapLanguagesBtn = document.getElementById('swap-languages');
+        const inputText = document.getElementById('input-text');
+        const outputText = document.getElementById('output-text');
+        const documentFileInput = document.getElementById('document-file');
+        const browseFileBtn = document.getElementById('browse-file-btn');
+        const fileNameDisplay = document.getElementById('file-name-display');
+        const outputDocument = document.getElementById('output-document');
+        const fileDropZone = document.getElementById('file-drop-zone-id');
+        const translateBtn = document.getElementById('translate-btn');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const pageHeader = document.getElementById('page-header');
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        // --- State Variables ---
+        let currentMode = 'text';
+        let selectedFile = null;
+
+        // --- Initial Setup ---
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // --- Event Listeners ---
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            pageHeader.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile Navigation Toggle
+        if (navToggle && navLinks) {
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('nav-active');
+                const isExpanded = navLinks.classList.contains('nav-active');
+                navToggle.setAttribute('aria-expanded', isExpanded.toString());
+                const icon = navToggle.querySelector('i');
+                icon.classList.toggle('fa-bars', !isExpanded);
+                icon.classList.toggle('fa-times', isExpanded);
+            });
+
+            // Close mobile menu on link click
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navLinks.classList.contains('nav-active')) {
+                        navLinks.classList.remove('nav-active');
+                        navToggle.setAttribute('aria-expanded', 'false');
+                        navToggle.querySelector('i').classList.add('fa-bars');
+                        navToggle.querySelector('i').classList.remove('fa-times');
+                    }
+                });
+            });
+        }
+
+        // Mode Switching
+        modeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modeButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                currentMode = button.dataset.mode;
+
+                const isTextMode = currentMode === 'text';
+                textTranslationArea.style.display = isTextMode ? 'grid' : 'none';
+                documentTranslationArea.style.display = isTextMode ? 'none' : 'grid';
+                translateBtn.innerHTML = isTextMode
+                    ? '<i class="fas fa-magic"></i> Translate Text'
+                    : '<i class="fas fa-magic"></i> Translate Document (Simulated)';
+                clearOutputs();
+            });
+        });
+
+        // Swap Languages
+        swapLanguagesBtn.addEventListener('click', () => {
+            const sourceVal = sourceLangSelect.value;
+            const targetVal = targetLangSelect.value;
+            // Prevent swapping if one is 'auto' to avoid 'auto' in target
+            if (sourceVal !== 'auto' && targetVal !== 'auto') {
+                 sourceLangSelect.value = targetVal;
+                 targetLangSelect.value = sourceVal;
+            } else if (sourceVal === 'auto' && targetVal !== 'auto') {
+                 // If source is auto, just set source to target, keep target
+                 sourceLangSelect.value = targetVal;
+            } else if (targetVal === 'auto' && sourceVal !== 'auto'){
+                 // If target is auto (shouldn't happen with default UI), set target to source
+                 targetLangSelect.value = sourceVal;
+            }
+            // If both were somehow auto, do nothing
+        });
+
+        // File Input Handling
+        if (browseFileBtn) {
+            browseFileBtn.addEventListener('click', () => documentFileInput.click());
+        }
+        if (documentFileInput) {
+            documentFileInput.addEventListener('change', (event) => {
+                if (event.target.files.length > 0) {
+                   handleFile(event.target.files[0]);
+                }
+            });
+        }
+
+        // Drag and Drop Handling
+        if (fileDropZone) {
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                fileDropZone.addEventListener(eventName, preventDefaults, false);
+            });
+            ['dragenter', 'dragover'].forEach(eventName => {
+                fileDropZone.addEventListener(eventName, () => fileDropZone.classList.add('dragover'), false);
+            });
+            ['dragleave', 'drop'].forEach(eventName => {
+                fileDropZone.addEventListener(eventName, () => fileDropZone.classList.remove('dragover'), false);
+            });
+            fileDropZone.addEventListener('drop', (event) => {
+                 if (event.dataTransfer.files.length > 0) {
+                    handleFile(event.dataTransfer.files[0]);
+                 }
+            });
+        }
+
+        // Translation Button Click
+        translateBtn.addEventListener('click', handleTranslationRequest);
+
+        // Internal Link Smooth Scroll & Placeholder Alerts
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                let targetElement = null;
+
+                if (href.length > 1 && href !== '#') {
+                    try { targetElement = document.querySelector(href); }
+                    catch (error) { console.warn("Invalid selector for href:", href); }
+                }
+
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                } else if (href === '#privacy-policy' || this.id === 'privacy-link') {
+                    e.preventDefault();
+                    alert('Placeholder: Privacy Policy content would be displayed here or link to a separate page.');
+                } else if (href === '#terms-of-service' || this.id === 'terms-link') {
+                    e.preventDefault();
+                    alert('Placeholder: Terms of Service content would be displayed here or link to a separate page.');
+                } else if (this.id === 'contact-link' && href === '#') {
+                     e.preventDefault();
+                     alert('Placeholder: Contact information or a form would appear here.');
+                } else if (href === '#') {
+                    e.preventDefault(); // Prevent jump for other unhandled href="#"
+                }
+                // Allow default behavior for non-matching links (though none exist here)
+            });
+        });
+
+        // AdSense Placeholder Logic (runs after a delay)
+        setTimeout(() => {
+            document.querySelectorAll('.adsbygoogle').forEach(adSlot => {
+                // Check if ad slot is empty or marked unfilled
+                const isEmpty = adSlot.innerHTML.trim() === '';
+                const isUnfilled = adSlot.dataset.adStatus === 'unfilled';
+                // Check clientHeight as a fallback, but it can be unreliable
+                const hasNoHeight = adSlot.clientHeight < 10; // Use a small threshold
+
+                if ((isEmpty || isUnfilled) && hasNoHeight) {
+                    const placeholder = adSlot.parentElement.querySelector('.ad-placeholder-text');
+                    if (placeholder) placeholder.style.display = 'block';
+                }
+            });
+        }, 4000); // Increased delay slightly
+
+        // --- Helper Functions ---
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function clearOutputs() {
+            outputText.value = '';
+            outputDocument.innerHTML = 'Document translation functionality is simulated. Real processing requires backend development. Select a file and click Translate to see simulation.';
+            fileNameDisplay.textContent = '';
+            selectedFile = null;
+            if (documentFileInput) documentFileInput.value = ''; // Reset file input
+        }
+
+        function handleFile(file) {
+            if (!file) return;
+
+            const allowedTypes = ["application/pdf", "image/jpeg", "image/png", "image/jpg"];
+            if (allowedTypes.includes(file.type)) {
+                selectedFile = file;
+                fileNameDisplay.textContent = `Selected: ${selectedFile.name} (${(selectedFile.size / 1024).toFixed(2)} KB)`;
+                outputDocument.textContent = `File "${selectedFile.name}" is ready for simulated translation. Click the translate button.`;
+            } else {
+                alert("Invalid file type. Please select a PDF, JPG, or PNG file.");
+                clearOutputs(); // Clear everything if invalid file selected
+            }
+        }
+
+        function showLoading(show) {
+             loadingIndicator.style.display = show ? 'flex' : 'none';
+             translateBtn.disabled = show;
+        }
+
+        function handleTranslationRequest() {
+            showLoading(true);
+            outputText.value = ''; // Clear previous text output
+
+            if (currentMode === 'text') {
+                translateTextUsingApi();
+            } else { // Document mode
+                if (selectedFile) {
+                    outputDocument.innerHTML = 'Processing simulated document translation...';
+                    simulateDocumentTranslation();
+                } else {
+                    outputDocument.innerHTML = "<p style='color:red; font-weight:bold;'>Please select a document file (PDF, JPG, PNG) to simulate translation.</p>";
+                    showLoading(false);
+                }
+            }
+        }
+
+        function translateTextUsingApi() {
+            const textToTranslate = inputText.value.trim();
+            if (!textToTranslate) {
+                outputText.value = "Please enter some text to translate.";
+                showLoading(false);
+                return;
+            }
+
+            let sourceLang = sourceLangSelect.value;
+            const targetLang = targetLangSelect.value;
+
+            // Basic validation: Ensure target language is selected
+            if (!targetLang || targetLang === 'auto') { // Target cannot be auto
+                 outputText.value = "Please select a valid target language.";
+                 showLoading(false);
+                 return;
+            }
+            // Basic validation: Ensure source and target are different
+             if (sourceLang !== 'auto' && sourceLang === targetLang) {
+                 outputText.value = "Source and target languages cannot be the same.";
+                 showLoading(false);
+                 return;
+             }
+
+            // Use the MyMemory API (Free, Public - Rate Limits Apply)
+            // Format: https://api.mymemory.translated.net/get?q=...&langpair=en|it
+            let langPair = targetLang; // Default if source is auto
+             if (sourceLang !== 'auto') {
+                 langPair = `${sourceLang}|${targetLang}`;
+             }
+
+            const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textToTranslate)}&langpair=${langPair}`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Network response was not ok (status: ${response.status})`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.responseStatus && data.responseStatus !== 200) {
+                        // MyMemory specific error handling
+                        outputText.value = `Error: ${data.responseDetails || 'Translation failed. Check languages or API limits.'}`;
+                    } else if (data.responseData && data.responseData.translatedText) {
+                        // Decode HTML entities that MyMemory sometimes returns
+                        const decodedText = document.createElement('textarea');
+                        decodedText.innerHTML = data.responseData.translatedText;
+                        outputText.value = decodedText.value;
+                    } else {
+                        outputText.value = "Translation could not be retrieved. API might have issues or rate limits.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Translation API Error:', error);
+                    outputText.value = `Error during translation: ${error.message}. Please try again later.`;
+                })
+                .finally(() => {
+                    showLoading(false);
+                });
+        }
+
+        function simulateDocumentTranslation() {
+            const sourceLangText = sourceLangSelect.options[sourceLangSelect.selectedIndex].text;
+            const targetLangText = targetLangSelect.options[targetLangSelect.selectedIndex].text;
+
+            // Simulate network delay/processing time
+            setTimeout(() => {
+                outputDocument.innerHTML = `
+                    <p style="font-weight:bold; color: var(--primary-color);">[SIMULATED DOCUMENT TRANSLATION OUTPUT]</p>
+                    <p><em style="font-size: 0.9em;">This is a mock representation. Actual document translation requires backend processing (file upload, OCR/parsing, API call).</em></p>
+                    <hr style="margin:12px 0; border-top: 1px solid #ccc;">
+                    <p><strong>Original File:</strong> ${selectedFile.name}</p>
+                    <p><strong>File Type:</strong> ${selectedFile.type}</p>
+                    <p><strong>Size:</strong> ${(selectedFile.size / 1024).toFixed(2)} KB</p>
+                    <p><strong>Detected Source Language (Simulated):</strong> ${sourceLangSelect.value === 'auto' ? 'English (Auto-Detected)' : sourceLangText}</p>
+                    <p><strong>Target Language:</strong> ${targetLangText}</p>
+                    <br>
+                    <p><strong>Simulated Extracted Text (mock):</strong></p>
+                    <p style="font-style:italic; color:#555; background:#eee; padding: 5px; border-radius: 4px;">Welcome to AI Translator Pro. This document outlines the features and capabilities. Please upload PDF or image files for translation.</p>
+                    <br>
+                    <p><strong>Simulated Translated Text (mock):</strong></p>
+                    <p style="font-style:italic; color:#555; background:#e0f2ff; padding: 5px; border-radius: 4px;">Bienvenido a AI Translator Pro. Este documento describe las características y capacidades. Cargue archivos PDF o de imagen para traducirlos.</p>
+                    <hr style="margin:12px 0; border-top: 1px solid #ccc;">
+                    <p style="font-size: 0.85em; color: #666;"><strong>Note:</strong> Real implementation involves server-side file handling, text extraction (OCR for images, parsing for PDFs), calling a translation API with the extracted text, and potentially reconstructing a translated document or displaying extracted text.</p>
+                `;
+                showLoading(false);
+            }, 1800); // Slightly longer simulation time
+        }
+
+    }); // End DOMContentLoaded
+</script>
+
+</body>
+</html>
